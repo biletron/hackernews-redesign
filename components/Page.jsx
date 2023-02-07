@@ -20,12 +20,14 @@ const item = {
   },
 };
 
-export default function Show({ initialData, page, category }) {
+export default function Page({ initialData, page, category }) {
   const { data: stories, isPending } = useFetched(
-    `api/${category}?page=${page}`,
+    `https://node-hnapi.herokuapp.com/${category}?page=${page}`,
+    // `api/${category}?page=${page}`,
     initialData
   );
 
+  console.log(stories);
   if (isPending) {
     return <h1>Loading...</h1>;
   }

@@ -4,7 +4,7 @@ import getStories from "../lib/getStories";
 import Page from "../components/Page";
 
 export async function getStaticProps() {
-  const posts = await getStories("askstories");
+  const posts = await getStories("ask");
   return { props: { posts } };
 }
 

@@ -4,7 +4,7 @@ import getStories from "../lib/getStories";
 import Page from "../components/Page";
 
 export async function getStaticProps() {
-  const posts = await getStories("showstories");
+  const posts = await getStories("show");
   return { props: { posts } };
 }
 
@@ -16,7 +16,7 @@ export default function Show({ posts }) {
     pages.push(
       <Page
         page={i + 1}
-        category="showstories"
+        category="news"
         initialData={i + 1 !== 1 ? null : posts}
         key={i}
       />

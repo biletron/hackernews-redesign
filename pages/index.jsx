@@ -4,7 +4,7 @@ import getStories from "../lib/getStories";
 import Page from "../components/Page";
 
 export async function getStaticProps() {
-  const posts = await getStories("frontstories");
+  const posts = await getStories("news");
   return { props: { posts } };
 }
 
@@ -27,10 +27,7 @@ export default function Home({ posts }) {
     <>
       <Head>
         <title>Hackernews Redesign - A HN client built on top of Next.js</title>
-        <meta
-          property="og:image"
-          content="/hn-redesign.png"
-        />
+        <meta property="og:image" content="/hn-redesign.png" />
       </Head>
       <div className="lg:col-span-2 mt-8">
         <span className="main-title flex items-center text-soft-black">

@@ -3,7 +3,7 @@ import getStories from "../lib/getStories";
 import Page from "../components/Page";
 
 export async function getStaticProps() {
-  const posts = await getStories("jobstories");
+  const posts = await getStories("jobs");
   return { props: { posts } };
 }
 
